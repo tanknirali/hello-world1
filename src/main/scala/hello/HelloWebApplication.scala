@@ -1,6 +1,7 @@
 package hello
 
 import org.springframework.boot.SpringApplication
+
 /**
  * This object bootstraps Spring Boot web application.
  * Via Gradle: gradle bootRun
@@ -8,8 +9,9 @@ import org.springframework.boot.SpringApplication
  * @author saung
  * @since 1.0
  */
-object HelloWebApplication {
 
+object HelloWebApplication {
+    @RequestMapping(method=RequestMethod.GET)
 	def main(args: Array[String]) {
 	   SpringApplication.run(classOf[HelloConfig]);
 	}
